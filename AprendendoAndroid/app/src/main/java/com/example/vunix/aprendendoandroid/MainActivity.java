@@ -17,13 +17,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btEntrar = (Button) findViewById(R.id.btEntrar);
-        btEntrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.print("Clicou no botão");
-                AlertDialog.Builder alert = new AlertDialog.Builder(context).setMessage("Clicou no botão");
-            }
-        });
         }
     }
