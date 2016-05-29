@@ -16,6 +16,5 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Eventos eventos = new Eventos(MainActivity.this);
         eventos.inicializarComponentes();
-
     }
 }

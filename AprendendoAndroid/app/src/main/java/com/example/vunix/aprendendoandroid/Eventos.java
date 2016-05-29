@@ -14,9 +14,8 @@ import android.widget.EditText;
  */public class Eventos
 {
 
-    private Button btnEntrar;
-    private EditText editLogin;
-    private EditText editSenha;
+    private Button btnCalcular;
+    private EditText editValor;
     private Activity activity;
 
     public Eventos(Activity activity){
@@ -29,23 +28,23 @@ import android.widget.EditText;
     }
     private void IniComponentes()
     {
-        editLogin =  (EditText) activity.findViewById(R.id.editLogin);
-        editSenha = (EditText) activity.findViewById(R.id.editSenha);
-        btnEntrar =  (Button) activity.findViewById(R.id.btnEntrar);
+        editValor =  (EditText) activity.findViewById(R.id.editValor);
+        btnCalcular =  (Button) activity.findViewById(R.id.btnCalcular);
     }
 
     private void DefinirEventos()
     {
-        btnEntrar.setOnClickListener(new View.OnClickListener()
+        btnCalcular.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(activity);
-                dlg.setMessage("Clicou no botão");
+                String strValor = editValor.getText().toString();
+                Double valorDouble = Double.parseDouble(strValor);
+                dlg.setMessage("Seu dízimo deve ser: "+valorDouble*0.10);
                 dlg.show();
             }
         });
-
 
     }
 }
